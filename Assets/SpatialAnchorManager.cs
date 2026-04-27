@@ -11,18 +11,13 @@ public class SpatialAnchorManager : MonoBehaviour
 
     const string NumUuidsPlayerPref = "numUuids";
 
+    // Dev Mode (Two Button) or (spawn physical prefab) --> cf. [BuildingBlock] Controller Buttons Mapper Dev 
     public void DevMode()
     {
-        Debug.Log("Lese gespeicherte UUIDs...");
-
-        GetAnchorAnchorUuidFromLocalStorage(_uuids);
-
-        foreach (var uuid in _uuids)
-        {
-            Debug.Log("UUID (gespeichert): " + uuid);
-        }
+        // Get all currently existing Spatial Anchors in the scene (they´ll be hidden)
         var anchors = FindObjectsOfType<OVRSpatialAnchor>();
 
+        // Show all Spatial Anchors in the scene (no more hidden)
         foreach (var anchor in anchors)
         {
             var renderers = anchor.GetComponentsInChildren<Renderer>();
@@ -32,8 +27,8 @@ public class SpatialAnchorManager : MonoBehaviour
             }
         }
 
+        // Spawn on evry Anchor a physical Object
         StartCoroutine(PrintSceneAnchorsDelayed());
-
     }
 
     public void PlayerMode()
@@ -41,17 +36,12 @@ public class SpatialAnchorManager : MonoBehaviour
         StartCoroutine(PlayerModeFlash());
     }
 
+    // Flash the Anchor just for a short Time
     IEnumerator PlayerModeFlash()
     {
-        // 1. UUIDs laden
         GetAnchorAnchorUuidFromLocalStorage(_uuids);
 
-        foreach (var uuid in _uuids)
-        {
-            Debug.Log("UUID (gespeichert): " + uuid);
-        }
-
-        // 2. ALLE Anchors sichtbar machen
+        
         var anchors = FindObjectsOfType<OVRSpatialAnchor>();
 
         foreach (var anchor in anchors)
@@ -67,10 +57,8 @@ public class SpatialAnchorManager : MonoBehaviour
 
         yield return anchors = FindObjectsOfType<OVRSpatialAnchor>();
 
-        // 4. Wieder verstecken
         foreach (var anchor in anchors)
         {
-            Debug.Log("ICH BIN AM VERSTECKEN");
             var renderers = anchor.GetComponentsInChildren<Renderer>();
             foreach (var r in renderers)
             {
@@ -106,6 +94,7 @@ public class SpatialAnchorManager : MonoBehaviour
         }
     }
 
+    // For debugging get ID,Position and Rotation and then Spawn the Prefab there and give the Prefab a unique Name
     IEnumerator PrintSceneAnchorsDelayed()
     {
         yield return new WaitForSeconds(0.5f);
@@ -122,8 +111,74 @@ public class SpatialAnchorManager : MonoBehaviour
             Debug.Log($"Pos: {anchor.transform.position}");
             Debug.Log($"Rot: {anchor.transform.rotation.eulerAngles}");
 
-            liste.SpawnPrefabAtAnchor(index, anchor.transform);
+            GameObject obj = liste.SpawnPrefabAtAnchor(index, anchor.transform);
+
+            if (obj != null)
+            {
+                obj.name = "SpawnedObject_"+ index;
+            }
+
             index++;
         }
+    }
+
+    public void DeleteAllSpawnedObjects()
+    {
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+        foreach (var obj in allObjects)
+        {
+            if (obj.name.StartsWith("SpawnedObject_"))
+            {
+                Destroy(obj);
+            }
+        }
+    }
+
+    public async void DeleteLastAnchor()
+    {
+        SpatialAnchorOrder order = FindFirstObjectByType<SpatialAnchorOrder>();
+
+        if (order == null || order.ordered.Count == 0)
+        {
+            Debug.Log("Keine gespeicherten Anchors in Reihenfolge.");
+            return;
+        }
+
+        Guid lastUuid = order.ordered[^1];
+
+        // finde Anchor in Szene über Component + UUID
+        OVRSpatialAnchor target = null;
+
+        var anchors = FindObjectsOfType<OVRSpatialAnchor>();
+        foreach (var a in anchors)
+        {
+            if (a.Uuid == lastUuid)
+            {
+                target = a;
+                break;
+            }
+        }
+
+        if (target == null)
+        {
+            Debug.LogWarning("Anchor nicht in Szene gefunden: " + lastUuid);
+            order.ordered.RemoveAt(order.ordered.Count - 1);
+            return;
+        }
+
+        Debug.Log("Erasing REAL last anchor: " + lastUuid);
+
+        var result = await target.EraseAnchorAsync();
+
+        if (!result.Success)
+        {
+            Debug.LogWarning("Anchor konnte nicht gelöscht werden!");
+            return;
+        }
+
+        Destroy(target.gameObject);
+
+        order.ordered.RemoveAt(order.ordered.Count - 1);
     }
 }
