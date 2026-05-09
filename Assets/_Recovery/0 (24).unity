@@ -5261,7 +5261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   prefabs:
-  - {fileID: 216544098876398176, guid: b4facacbfce5dfb44989eed118b6258f, type: 3}
+  - {fileID: 7098258585560756358, guid: ea680a7d450f74149aa443ab5aead155, type: 3}
   - {fileID: 4900789273573338753, guid: 2c380dde323957d44b335da5b2be41d1, type: 3}
   - {fileID: 8678884903629024778, guid: fbe2bce80bd6a894cb1a1839050ac3a3, type: 3}
   - {fileID: 2659299292158895299, guid: 7061af319320c114780642ed0b4d9f78, type: 3}
@@ -12304,8 +12304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QRSpawner
   cubePrefab: {fileID: 2317809658562371520, guid: bf7c8d5d9a1083448af37645271b53ae, type: 3}
-  forwardOffset: 0.1
-  upOffset: 0.5
 --- !u!4 &1919686395
 Transform:
   m_ObjectHideFlags: 0
