@@ -12303,7 +12303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45f9edceeb81c3543b45a13fb31ab930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QRSpawner
-  cubePrefab: {fileID: 2317809658562371520, guid: bf7c8d5d9a1083448af37645271b53ae, type: 3}
+  prefabA: {fileID: 3699383735042632520, guid: ce4b697fecb855e44b0614e9c431c6fb, type: 3}
+  prefabB: {fileID: 4430074720321719736, guid: 129a29415dd2bb34695ea899c5f8b778, type: 3}
+  prefabC: {fileID: 2753357234158997267, guid: b7b257ea4480cb649b812cd1aa93acd2, type: 3}
+  prefabD: {fileID: 4340119332566020036, guid: 109a9ba582736764b9f6411b1b9dc23b, type: 3}
+  prefabE: {fileID: 4087650766423322775, guid: c3e3bbdda1d844e4e81c258b1d7b8bde, type: 3}
+  prefabF: {fileID: 6069924357756941282, guid: a2cc0dd165eec2d41a85469ddbc50961, type: 3}
+  prefabG: {fileID: 1894995140296147252, guid: 2b496bb964c34b14db4687cf58fd0f1f, type: 3}
+  defaultPrefab: {fileID: 7142682606090952278, guid: c7266212bc4bc064ab54be017e306fb5, type: 3}
   forwardOffset: 0.1
   upOffset: 0.5
 --- !u!4 &1919686395

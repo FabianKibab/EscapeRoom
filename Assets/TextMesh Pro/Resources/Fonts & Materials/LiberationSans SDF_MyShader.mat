@@ -31,9 +31,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 1.68
+    - _FresnelPower: 10
     m_Colors:
-    - _FresnelColour: {r: 0, g: 10.539323, b: 22.363522, a: 1}
+    - _FresnelColour: {r: 0, g: 1, b: 0.9256195, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &9112146677125822641
