@@ -24,6 +24,10 @@ public class QRSpawner : MonoBehaviour
     public GameObject prefabE;
     public GameObject prefabF;
     public GameObject prefabG;
+    public GameObject raetselText1;
+    public GameObject raetselText2;
+    public GameObject raetselText3;
+    public GameObject raetselText4;
     public GameObject defaultPrefab;
 
     public float forwardOffset = 0.5f;
@@ -42,6 +46,11 @@ public class QRSpawner : MonoBehaviour
             { "The_Racing_Story5", prefabE },
             { "The_Racing_Story6", prefabF },
             { "The_Racing_Story7", prefabG }
+
+            { "Zettel1", raetselText1 }, 
+            { "Zettel2", raetselText2 },
+            { "Zettel3", raetselText3 },
+            { "Zettel4", raetselText4 }
         };
     }
 
