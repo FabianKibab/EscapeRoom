@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - CarNb1
+  - CarNb2
+  - CarNb3
+  - CarNb4
+  - CarNb5
+  - CarNb6
+  - CarNb7
   layers:
   - Default
   - TransparentFX

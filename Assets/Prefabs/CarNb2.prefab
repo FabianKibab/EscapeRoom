@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 6740883283190056468}
   m_Layer: 0
   m_Name: CarNb2
-  m_TagString: Untagged
+  m_TagString: CarNb2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

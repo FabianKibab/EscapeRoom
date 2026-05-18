@@ -45,7 +45,7 @@ public class QRSpawner : MonoBehaviour
             { "The_Racing_Story4", prefabD },
             { "The_Racing_Story5", prefabE },
             { "The_Racing_Story6", prefabF },
-            { "The_Racing_Story7", prefabG }
+            { "The_Racing_Story7", prefabG },
 
             { "Zettel1", raetselText1 }, 
             { "Zettel2", raetselText2 },

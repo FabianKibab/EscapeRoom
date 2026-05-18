@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarNb6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c199a6a1872f3744aee0c4d39f4cc00, type: 3}
+      propertyPath: m_TagString
+      value: CarNb6
+      objectReference: {fileID: 0}
     - target: {fileID: 5403801678779156819, guid: 1c199a6a1872f3744aee0c4d39f4cc00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4044
