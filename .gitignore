@@ -116,8 +116,9 @@ iClone/
 *.obj
 *.psd
 *.tga
-*.png
 *.iAvatar
 *.iMotion
-Assets/Avatar/
+*.png
 Assets/Avatar_Fertig/
+Assets/Avatar/
+
