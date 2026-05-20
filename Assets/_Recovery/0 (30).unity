@@ -7759,22 +7759,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 994562999174859492, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 994562999174859492, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 994562999174859492, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 994562999174859492, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2031577224894205536, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7815,10 +7799,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2031577224894205536, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6174443360394062352, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7851,18 +7831,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7742702645451739735, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982899537}
-    - targetCorrespondingSourceObject: {fileID: 7742702645451739735, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 982899544}
     - targetCorrespondingSourceObject: {fileID: 5984722055535170551, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982899541}
     - targetCorrespondingSourceObject: {fileID: 5984722055535170551, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982899534}
-    - targetCorrespondingSourceObject: {fileID: 5984722055535170551, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 982899543}
     - targetCorrespondingSourceObject: {fileID: 5984722055535170551, guid: 45bf31f7366c3ff48a8eead56b38d9f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982899533}
@@ -8043,41 +8017,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &982899543
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982899529}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8101969, y: 1.7543702, z: 0.8101952}
-  m_Center: {x: 0.00000047683716, y: 0.87718505, z: -0.00000035762787}
---- !u!114 &982899544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982899527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23e46bd45adc9e048a37dc0dbb625f82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FreezePodest
-  movementThreshold: 0.01
-  freezeAfterSeconds: 1
 --- !u!1 &983190275
 GameObject:
   m_ObjectHideFlags: 0
