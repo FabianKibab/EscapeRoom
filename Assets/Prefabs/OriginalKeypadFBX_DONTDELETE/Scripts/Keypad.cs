@@ -125,6 +125,15 @@ namespace NavKeypad
             onAccessGranted?.Invoke();
             panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
             audioSource.PlayOneShot(accessGrantedSfx);
+            // NEU: Wir starten einen Timer, damit der Sound noch spielt und das Keypad erst nach 1.5 Sekunden verschwindet
+            StartCoroutine(VerschwindeNachZeit(1.5f));
+        }
+
+        // NEU: Die Funktion, die kurz wartet und dann das Keypad ausschaltet
+        private IEnumerator VerschwindeNachZeit(float sekunden)
+        {
+            yield return new WaitForSeconds(sekunden);
+            gameObject.SetActive(false);
         }
 
     }
