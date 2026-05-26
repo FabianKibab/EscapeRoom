@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3b3f04ac18184468bedd999e5a6688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.PokeInteractableVisual
-  _pokeInteractable: {fileID: 0}
+  _pokeInteractable: {fileID: 310263388476049059}
   _buttonBaseTransform: {fileID: 4876037851053450719}
 --- !u!1 &5848895647600641044
 GameObject:
