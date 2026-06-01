@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5172575222377789034, guid: 9d92d8376c23a6a49b9482091637473e, type: 3}
       propertyPath: manipulator
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5172575222377789034, guid: 9d92d8376c23a6a49b9482091637473e, type: 3}
       propertyPath: currentEditType
@@ -9434,11 +9434,11 @@ MonoBehaviour:
       <PushToTalkStartupMode>k__BackingField: 0
     <PushToTalkPolicy>k__BackingField:
       <EnableServerSttToggle>k__BackingField: 1
-      <InterruptBotOnPress>k__BackingField: 0
+      <InterruptBotOnPress>k__BackingField: 1
       <RequireTurnCompletionBeforeNextPress>k__BackingField: 1
       <TurnCompletionTimeoutMs>k__BackingField: 5000
       <AllowSpeechStoppedFallbackAfterSpeechStart>k__BackingField: 0
-  _pushToTalkKey: 0
+  _pushToTalkKey: 116
   _roomRejoinTtlSeconds: 60
   _resumePolicy: 1
   _maxReconnectAttempts: 3

@@ -132,6 +132,12 @@ public class SpatialAnchorManager : MonoBehaviour
             {
                 Destroy(obj);
             }
+            
+            if (obj.name.EndsWith("White(Clone)"))
+            {
+                Destroy(obj);
+            }
+   
         }
     }
 

@@ -56,7 +56,7 @@ public class PodestManager : MonoBehaviour
             // Trigger 2 -> Tag CarNb2
             if (trigger2.bounds.Intersects(col.bounds))
             {
-                if (col.CompareTag("CarNb2"))
+                if (col.CompareTag("CarNb3"))
                 {
                     slot2Correct = true;
                 }
@@ -65,7 +65,7 @@ public class PodestManager : MonoBehaviour
             // Trigger 3 -> Tag CarNb3
             if (trigger3.bounds.Intersects(col.bounds))
             {
-                if (col.CompareTag("CarNb3"))
+                if (col.CompareTag("CarNb5"))
                 {
                     slot3Correct = true;
                 }
