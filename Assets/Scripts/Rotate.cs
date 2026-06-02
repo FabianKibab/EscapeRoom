@@ -31,4 +31,9 @@ public class Rotate : MonoBehaviour
             fixedZ
         );
     }
+
+    public float GetNormalized()
+    {
+        return currentX % 360f;
+    }
 }

@@ -1678,6 +1678,7 @@ GameObject:
   - component: {fileID: 2473562533997154470}
   - component: {fileID: 2627643896427026779}
   - component: {fileID: 4220066177911940359}
+  - component: {fileID: 7762110484503487860}
   m_Layer: 0
   m_Name: FabiansSlotMaschiene 1
   m_TagString: Untagged
@@ -1785,6 +1786,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.03, y: 4.5, z: 2}
   m_Center: {x: -0.48, y: 2.25, z: 0}
+--- !u!114 &7762110484503487860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732374398235565152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a81d81c3f7d4348bf0c0d5b1b8e13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  slot1: {fileID: 4023558941406962064}
+  slot2: {fileID: 4126866568056115885}
+  slot3: {fileID: 3548272013886798047}
 --- !u!1 &5790364914025384608
 GameObject:
   m_ObjectHideFlags: 0
