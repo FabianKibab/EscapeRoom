@@ -104,5 +104,36 @@ public class PodestManager : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        GameObject CarNb1 = GameObject.FindWithTag("CarNb1");
+        if (CarNb1 != null)
+        {
+            CarNb1.SetActive(false);
+        }
+        GameObject CarNb2 = GameObject.FindWithTag("CarNb2");
+        if (CarNb2 != null)
+        {
+            CarNb2.SetActive(false);
+        }
+        GameObject CarNb3 = GameObject.FindWithTag("CarNb3");
+        if (CarNb3 != null)
+        {
+            CarNb3.SetActive(false);
+        }
+        GameObject CarNb4 = GameObject.FindWithTag("CarNb4");
+        if (CarNb4 != null)
+        {
+            CarNb4.SetActive(false);
+        }
+        GameObject CarNb5 = GameObject.FindWithTag("CarNb5");
+        if (CarNb5 != null)
+        {
+            CarNb5.SetActive(false);
+        }
+        GameObject CarNb6 = GameObject.FindWithTag("CarNb6");
+        if (CarNb6 != null)
+        {
+            CarNb6.SetActive(false);
+        }
     }
 }
